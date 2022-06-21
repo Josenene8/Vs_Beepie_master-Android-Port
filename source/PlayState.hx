@@ -928,9 +928,10 @@ class PlayState extends MusicBeatState
                 #if android
 	        addAndroidControls();
 	#end
-		if (curSong == 'mine') {
+		if (SONG.song.toLowerCase() == "mine") {
 		    addVirtualPad(NONE, A);
-		}
+		    addPadCamera();
+		
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
 		// UI_camera.zoom = 1;
