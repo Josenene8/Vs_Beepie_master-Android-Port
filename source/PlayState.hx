@@ -928,7 +928,9 @@ class PlayState extends MusicBeatState
                 #if android
 	        addAndroidControls();
 	#end
-		
+		if (curSong == 'mine') {
+		    addVirtualPad(NONE, A);
+		}
 		
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
@@ -3173,10 +3175,10 @@ class PlayState extends MusicBeatState
 					//Dodge code, yes it's bad but oh well. -Haz
 					//var dodgeButton = controls.ACCEPT; //I have no idea how to add custom controls so fuck it. -Haz
 		
-					if(controls.UP_P)
+					if(controls.ACCEPT)
 						trace('butttonpressed');
 		
-					if(controls.UP_P && !bfDodging && bfCanDodge){
+					if(controls.ACCEPT && !bfDodging && bfCanDodge){
 						trace('DODGE START!');
 						bfDodging = true;
 						bfCanDodge = false;
