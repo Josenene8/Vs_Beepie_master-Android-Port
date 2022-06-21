@@ -928,7 +928,8 @@ class PlayState extends MusicBeatState
                 #if android
 	        addAndroidControls();
 	#end
-		if (curSong == 'mine')
+		
+		if (curSong == 'mine'){
 		    addVirtualPad(NONE, A);
 		}
 		
