@@ -162,6 +162,9 @@ class ResultsScreen extends FlxSubState
         cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 
 		super.create();
+		#if android
+addVirtualPad(NONE, A);
+#end
 	}
 
 
