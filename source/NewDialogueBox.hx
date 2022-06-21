@@ -343,8 +343,19 @@ class NewDialogueBox extends FlxSpriteGroup
 			startDialogue();
 			dialogueStarted = true;
 		}
+                #if mobile
+		var justTouched:Bool = false;
 
-		if (PlayerSettings.player1.controls.BACK && dialogueStarted && !isEnding)
+		for (touch in FlxG.touches.list)
+		{
+			justTouched = false;
+			
+			if (touch.justReleased){
+				justTouched = true;
+			}
+		}
+		#end
+		if (FlxG.keys.justPressed.ANY #if mobile || justTouched #end && dialogueStarted == true)
 		{
 			isEnding = true;
 
