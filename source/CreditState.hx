@@ -222,7 +222,9 @@ class CreditState extends MusicBeatState
 
 
 		changeItem();
-
+                #if android
+		addVirtualPad(UP_DOWN);
+		#end
 		super.create();
 	}
 
