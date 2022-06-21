@@ -928,7 +928,7 @@ class PlayState extends MusicBeatState
                 #if android
 	        addAndroidControls();
 	#end
-		if (SONG.song.toLowerCase() == "mine") {
+		if (SONG.song.toLowerCase() == "mine") 
 		    addVirtualPad(NONE, A);
 		    addPadCamera();
 		
