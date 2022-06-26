@@ -5,7 +5,7 @@ import flixel.FlxG;
 import flixel.FlxState;
 #if android
 import extension.videoview.VideoView;
-import extension.AndroidTools;
+import android.AndroidTools;
 #elseif windows
 import vlc.VlcBitmap;
 import openfl.events.Event;
