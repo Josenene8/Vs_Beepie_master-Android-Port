@@ -2825,16 +2825,11 @@ class PlayState extends MusicBeatState
 					switch(SONG.song.toLowerCase())
 					{
 						case 'stalker':
-							FlxG.sound.music.stop();
-							case 'stalker':
 								PlayState.SONG = Song.loadFromJson(poop, PlayState.storyPlaylist[0]);
 								playCutscene('Cutscene1', 28);
 								playCutscene('Cutscene1');
 							}
-					}
-				}
-			}
-							
+				
 						default:
 							FlxTransitionableState.skipNextTransIn = true;
 							FlxTransitionableState.skipNextTransOut = true;
