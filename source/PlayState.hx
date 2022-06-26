@@ -2828,8 +2828,7 @@ class PlayState extends MusicBeatState
 								PlayState.SONG = Song.loadFromJson(poop, PlayState.storyPlaylist[0]);
 								playCutscene('Cutscene1', 28);
 								playCutscene('Cutscene1');
-							}
-				
+						
 						default:
 							FlxTransitionableState.skipNextTransIn = true;
 							FlxTransitionableState.skipNextTransOut = true;
