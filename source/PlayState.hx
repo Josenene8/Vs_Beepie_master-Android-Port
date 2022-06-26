@@ -2813,25 +2813,28 @@ class PlayState extends MusicBeatState
 
 						FlxG.sound.play(Paths.sound('Lights_Shut_off'));
 					}
-
+                                        function playCutscene(videoPlaying:String):Void
+	{
+		var video:MP4Handler = new MP4Handler();
+		video.playMP4(Paths.video(videoPlaying), null); 
+		video.finishCallback = function()
+		{
+			LoadingState.loadAndSwitchState(new PlayState());
+		}
+	}
 					switch(SONG.song.toLowerCase())
 					{
 						case 'stalker':
 							FlxG.sound.music.stop();
-							/*var video:MP4Handler = new MP4Handler();
-							video.playMP4(Paths.video('Cutscene1'));
-							video.finishCallback = function()*/
-							{
-								FlxTransitionableState.skipNextTransIn = true;
-								FlxTransitionableState.skipNextTransOut = true;
-								prevCamFollow = camFollow;
-			
+							case 'stalker':
 								PlayState.SONG = Song.loadFromJson(poop, PlayState.storyPlaylist[0]);
-								FlxG.sound.music.stop();
-			
-			
-								LoadingState.loadAndSwitchState(new PlayState());
+								playCutscene('Cutscene1', 28);
+								playCutscene('Cutscene1');
 							}
+					}
+				}
+			}
+							
 						default:
 							FlxTransitionableState.skipNextTransIn = true;
 							FlxTransitionableState.skipNextTransOut = true;
