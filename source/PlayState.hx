@@ -2826,7 +2826,7 @@ class PlayState extends MusicBeatState
 					{
 						case 'stalker':
 								PlayState.SONG = Song.loadFromJson(poop, 'stalker');
-								playCutscene('Cutscene1', 28);
+								playCutscene('Cutscene1');
 								playCutscene('Cutscene1');
 						
 						default:
