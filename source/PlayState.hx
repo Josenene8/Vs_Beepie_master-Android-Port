@@ -2825,7 +2825,7 @@ class PlayState extends MusicBeatState
 					switch(SONG.song.toLowerCase())
 					{
 						case 'stalker':
-								PlayState.SONG = Song.loadFromJson(poop, PlayState.storyPlaylist[0]);
+								PlayState.SONG = Song.loadFromJson(poop, 'stalker');
 								playCutscene('Cutscene1', 28);
 								playCutscene('Cutscene1');
 						
